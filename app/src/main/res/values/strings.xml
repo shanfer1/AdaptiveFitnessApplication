@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Adaptive Fitness</string>
+    <string name="bio_header">Add Bio</string>
+    <string name="preference_header">Workout Preference</string>
+    <string name="login_header">Login</string>
+    <string name="personal_info">Personal Information</string>
+
+    <string-array name="gender_array">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>TransGender</item>
+    </string-array>
+    <string-array name="acitivity_array">
+        <item>Choose Your Daily Activity Level</item>
+        <item>Mild</item>
+        <item>Average</item>
+        <item>Intense</item>
+    </string-array>
+    <string-array name="weight_units_array">
+        <item>pounds</item>
+        <item>kg</item>
+    </string-array>
+    <string-array name="height_units_array">
+        <item>feet</item>
+        <item>cm</item>
+    </string-array>
+    <string-array name="workout_preferences">
+        <item>Yoga</item>
+        <item>Swimming</item>
+        <item>Sports</item>
+        <item>Boxing</item>
+        <item>Running</item>
+        <item>Walking</item>
+        <item>Yoga</item>
+        <item>Gym(Mix of Weight Training and Cardio</item>
+        <item>Skipping</item>
+    </string-array>
+    <string-array name="goal_array">
+        <item>Select Goal</item>
+        <item>Loose Weight</item>
+        <item>Muscle Gain</item>
+        <item>Loose weight and Muscle Gain</item>
+    </string-array>
+
+    <string-array name="location_array">
+        <item>Choose location Preference</item>
+        <item>Indoor</item>
+        <item>Outdoor</item>
+        <item>Indoor/Outdoor</item>
+    </string-array>
+
+</resources>

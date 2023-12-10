@@ -1,0 +1,11 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home" android:title="Home"/>
+    <item android:id="@+id/nav_profile" android:title="Profile"/>
+    <item android:id="@+id/nav_gyms" android:title="Nearby Gyms"/>
+    <item
+        android:id="@+id/weather_rec"
+        android:title="Weather Recommendations" />
+    <item android:id="@+id/nav_signout" android:title="Log out"/>
+
+</menu>

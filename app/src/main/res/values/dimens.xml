@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default margin size -->
+    <dimen name="input_field_margin">35dp</dimen>
+    <dimen name="first_input_field_margin">150dp</dimen>
+    <dimen name="between_input_field_margin">30dp</dimen>
+    <dimen name="heading_checkbox_margin">15dp</dimen>
+
+    <dimen name="button_width">153dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="header_margin_top">75dp</dimen>
+    <dimen name="header_text_size">32sp</dimen>
+    <dimen name="input_text_size">20sp</dimen>
+
+    <dimen name="button_margin_top">40dp</dimen>
+
+</resources>

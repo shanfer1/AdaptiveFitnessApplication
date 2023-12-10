@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Profile">
+
+
+        <TextView
+            android:id="@+id/personalinformationTextViewHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_info"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/header_margin_top"
+            android:gravity="center"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutEmailCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/personalinformationTextViewHeader"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            app:cardElevation="4dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEmail"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:padding="4dp"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/loginTextViewHeader"
+            android:layout_marginTop="@dimen/between_input_field_margin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="Email"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutFullNameCard"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutEmailCard"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFullName"
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutEmailCard"
+            android:layout_marginTop="@dimen/between_input_field_margin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFulllName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="Full Name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutAgeCard"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutFullNameCard"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAge"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutFullNameCard"
+                android:layout_marginTop="@dimen/between_input_field_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Age"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutheightCard"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintTop_toBottomOf="@id/layoutAgeCard"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutheight"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutAgeCard"
+                android:layout_marginTop="@dimen/between_input_field_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Height"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutWeightCard"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintTop_toBottomOf="@id/layoutheightCard"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutweight"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutAgeCard"
+                android:layout_marginTop="@dimen/between_input_field_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextweight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Weight"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutDreamWeightCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutWeightCard"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="@dimen/input_field_margin"
+            android:layout_marginStart="@dimen/input_field_margin"
+            app:layout_constraintStart_toStartOf="@id/personalinformationTextViewHeader"
+            app:layout_constraintEnd_toEndOf="@id/personalinformationTextViewHeader"
+            app:cardElevation="2dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutdreamweight"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutAgeCard"
+                android:layout_marginTop="@dimen/between_input_field_margin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDreamWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Dream Weight"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutGenderCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutDreamWeightCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/profile_gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gender_array"
+                    android:background="@android:color/white"
+                    android:layout_marginStart="@dimen/input_field_margin"
+                    android:layout_marginEnd="@dimen/input_field_margin"
+                    android:layout_marginTop="@dimen/between_input_field_margin" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutacitivityCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutGenderCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Activity Level"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/profile_activity_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/acitivity_array"
+                    android:background="@android:color/white"
+                    android:layout_marginStart="@dimen/input_field_margin"
+                    android:layout_marginEnd="@dimen/input_field_margin"
+                    android:layout_marginTop="@dimen/between_input_field_margin" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutgoalCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutacitivityCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Goal"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/goalSpinner_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/goal_array"
+                    android:background="@android:color/white"
+                    android:layout_marginStart="@dimen/input_field_margin"
+                    android:layout_marginEnd="@dimen/input_field_margin"
+                    android:layout_marginTop="@dimen/between_input_field_margin" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutlocationCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutgoalCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location Preferences"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/profile_location_spinnner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/location_array"
+                    android:background="@android:color/white"
+                    android:layout_marginStart="@dimen/input_field_margin"
+                    android:layout_marginEnd="@dimen/input_field_margin"
+                    android:layout_marginTop="@dimen/between_input_field_margin" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutWorkoutDurationCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutlocationCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preferred Workout Duration"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <SeekBar
+                    android:id="@+id/profile_seek_bar_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="120"
+                    android:layout_marginStart="@dimen/between_input_field_margin"
+                    android:layout_marginTop="@dimen/heading_checkbox_margin"
+                    android:layout_marginEnd="@dimen/between_input_field_margin"
+                    android:progress="45" />
+
+                <TextView
+                    android:id="@+id/profile_duration_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/profile_seek_bar_duration"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_seek_bar_duration"
+                    android:text="45 minutes" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/layoutWorkoutIntensityCard"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutWorkoutDurationCard"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preferred Workout Intensity (scale 10)"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="4dp"/>
+                <SeekBar
+                    android:id="@+id/profile_seek_bar_intensity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10"
+                    android:layout_marginStart="@dimen/between_input_field_margin"
+                    android:layout_marginTop="@dimen/heading_checkbox_margin"
+                    android:layout_marginEnd="@dimen/between_input_field_margin"
+                    android:progress="5" />
+
+                <TextView
+                    android:id="@+id/profile_intensity_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/profile_seek_bar_intensity"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_seek_bar_intensity"
+                    android:text="5/10" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/profile_backbutton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintTop_toBottomOf="@id/layoutWorkoutIntensityCard"
+            android:layout_marginTop="@dimen/button_margin_top"
+            app:layout_constraintEnd_toStartOf="@id/profile_savebutton"
+            app:layout_constraintStart_toStartOf="@id/layoutWorkoutIntensityCard" />
+
+        <Button
+            android:id="@+id/profile_savebutton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:layout_constraintTop_toBottomOf="@id/layoutWorkoutIntensityCard"
+            android:layout_marginTop="@dimen/button_margin_top"
+            app:layout_constraintStart_toEndOf="@id/profile_backbutton"
+            app:layout_constraintEnd_toEndOf="@id/layoutWorkoutIntensityCard" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

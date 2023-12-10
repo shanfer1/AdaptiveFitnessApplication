@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalDetails">
+
+    <!-- Header TextView for "Add your Bio" -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/bio_header"
+    android:textSize="@dimen/header_text_size"
+    android:textStyle="bold"
+        android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    android:layout_marginTop="@dimen/header_margin_top" />
+
+
+    <!-- Gender Spinner -->
+    <Spinner
+        android:id="@+id/genderspinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_field_margin"
+        android:layout_marginEnd="@dimen/input_field_margin"
+        android:layout_marginTop="@dimen/header_margin_top"
+        android:entries="@array/gender_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+
+    <!-- Age EditText -->
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewYears"
+        app:layout_constraintStart_toStartOf="@+id/genderspinner"
+        app:layout_constraintTop_toBottomOf="@+id/genderspinner"
+        app:layout_constraintHorizontal_weight="8" />
+
+    <!-- Years TextView -->
+    <TextView
+        android:id="@+id/textViewYears"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="years"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="@+id/genderspinner"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_weight="2" />
+
+    <!-- Height EditText -->
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Height eg: 5 11"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerHeightunits"
+        app:layout_constraintStart_toStartOf="@+id/genderspinner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_weight="6" />
+
+
+
+
+    <!-- Height Units Spinner -->
+    <Spinner
+        android:id="@+id/spinnerHeightunits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/height_units_array"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextHeight"
+        app:layout_constraintEnd_toEndOf="@+id/genderspinner"
+        app:layout_constraintStart_toEndOf="@+id/editTextHeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextHeight"
+        app:layout_constraintHorizontal_weight="4" />
+
+
+    <!-- Weight EditText -->
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerWeightunits"
+        app:layout_constraintStart_toStartOf="@+id/genderspinner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeight"
+        app:layout_constraintHorizontal_weight="3" />
+
+    <!-- Weight Units Spinner -->
+    <Spinner
+        android:id="@+id/spinnerWeightunits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/weight_units_array"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextWeight"
+        app:layout_constraintEnd_toEndOf="@+id/genderspinner"
+        app:layout_constraintStart_toEndOf="@+id/editTextWeight"
+        app:layout_constraintTop_toTopOf="@+id/editTextWeight"
+        app:layout_constraintHorizontal_weight="2" />
+
+
+    <!-- Weight EditText -->
+    <EditText
+        android:id="@+id/dreamweight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Dream Weight"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/dreamweightspinnerunits"
+        app:layout_constraintStart_toStartOf="@+id/genderspinner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeight"
+        app:layout_constraintHorizontal_weight="6" />
+
+    <!-- Weight Units Spinner -->
+    <Spinner
+        android:id="@+id/dreamweightspinnerunits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/weight_units_array"
+        app:layout_constraintBottom_toBottomOf="@+id/dreamweight"
+        app:layout_constraintEnd_toEndOf="@+id/genderspinner"
+        app:layout_constraintStart_toEndOf="@+id/dreamweight"
+        app:layout_constraintTop_toTopOf="@+id/dreamweight"
+        app:layout_constraintHorizontal_weight="4" />
+
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/button_margin_top"
+        app:layout_constraintStart_toStartOf="@+id/genderspinner"
+        app:layout_constraintEnd_toStartOf="@+id/NextButton"
+        app:layout_constraintTop_toBottomOf="@+id/dreamweight"
+        />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintTop_toBottomOf="@+id/dreamweight"
+        android:layout_marginTop="@dimen/button_margin_top"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+
+        app:layout_constraintEnd_toEndOf="@+id/genderspinner"
+
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

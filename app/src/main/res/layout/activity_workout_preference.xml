@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".WorkoutPreference">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/preference_header"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:gravity="center"
+        />
+    <Spinner
+        android:id="@+id/acitivityspinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_field_margin"
+        android:layout_marginEnd="@dimen/input_field_margin"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:entries="@array/acitivity_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+    <Spinner
+        android:id="@+id/goalspinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_input_field_margin"
+        android:entries="@array/goal_array"
+        app:layout_constraintEnd_toEndOf="@id/acitivityspinner"
+        app:layout_constraintStart_toStartOf="@id/acitivityspinner"
+        app:layout_constraintTop_toBottomOf="@id/acitivityspinner" />
+
+        <Spinner
+            android:id="@+id/locationspinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_input_field_margin"
+            android:layout_marginBottom="5dp"
+            android:entries="@array/location_array"
+            app:layout_constraintBottom_toTopOf="@+id/checkable_spinner"
+            app:layout_constraintEnd_toEndOf="@id/goalspinner"
+            app:layout_constraintStart_toStartOf="@id/goalspinner"
+            app:layout_constraintTop_toBottomOf="@id/goalspinner" />
+
+
+        <Spinner
+            android:id="@+id/checkable_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/between_input_field_margin"
+            app:layout_constraintEnd_toEndOf="@+id/locationspinner"
+            app:layout_constraintStart_toStartOf="@+id/locationspinner"
+            app:layout_constraintTop_toBottomOf="@+id/locationspinner" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="309dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="@dimen/between_input_field_margin"
+            android:layout_marginEnd="144dp"
+            android:text="Preferred Workout Duration(minutes)"
+            app:layout_constraintEnd_toEndOf="@id/checkable_spinner"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/checkable_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/checkable_spinner" />
+
+
+        <TextView
+            android:id="@+id/durationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="45 minutes"
+            app:layout_constraintStart_toStartOf="@+id/seekBarduration"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarduration" />
+
+        <SeekBar
+            android:id="@+id/seekBarduration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="120"
+            android:layout_marginStart="@dimen/between_input_field_margin"
+            android:layout_marginTop="@dimen/heading_checkbox_margin"
+            android:layout_marginEnd="@dimen/between_input_field_margin"
+            app:layout_constraintTop_toBottomOf="@id/duration"
+            app:layout_constraintStart_toStartOf="@id/duration"
+            app:layout_constraintEnd_toEndOf="@id/duration"
+            android:progress="45" />
+
+        <TextView
+            android:id="@+id/intensity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Preferred Workout Intensity (scale 10)"
+            app:layout_constraintStart_toStartOf="@id/duration"
+            app:layout_constraintEnd_toEndOf="@id/duration"
+            android:layout_marginTop="@dimen/heading_checkbox_margin"
+            app:layout_constraintTop_toBottomOf="@id/durationValue"
+            />
+
+        <SeekBar
+            android:id="@+id/seekBarintensity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:layout_marginStart="@dimen/between_input_field_margin"
+            android:layout_marginTop="@dimen/heading_checkbox_margin"
+            android:layout_marginEnd="@dimen/between_input_field_margin"
+            app:layout_constraintTop_toBottomOf="@id/intensity"
+            app:layout_constraintStart_toStartOf="@id/intensity"
+            app:layout_constraintEnd_toEndOf="@id/intensity"
+            android:progress="5" />
+
+        <TextView
+            android:id="@+id/intensityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="5/10"
+            app:layout_constraintStart_toStartOf="@+id/seekBarintensity"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarintensity" />
+
+        <TextView
+        android:id="@+id/workoutpreference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Workout Preferences"
+        app:layout_constraintStart_toStartOf="@id/intensity"
+        app:layout_constraintEnd_toEndOf="@id/intensity"
+        android:layout_marginTop="@dimen/heading_checkbox_margin"
+        app:layout_constraintTop_toBottomOf="@id/intensityValue"
+        />
+
+    <LinearLayout
+        android:id="@+id/checkboxContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/workoutpreference"
+        app:layout_constraintEnd_toEndOf="@id/workoutpreference"
+        app:layout_constraintTop_toBottomOf="@id/workoutpreference"
+        android:layout_marginTop="@dimen/heading_checkbox_margin">
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintTop_toBottomOf="@id/checkboxContainer"
+            android:layout_marginTop="@dimen/button_margin_top"
+            app:layout_constraintEnd_toStartOf="@id/savebutton"
+            app:layout_constraintStart_toStartOf="@id/checkboxContainer" />
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@id/checkboxContainer"
+        android:layout_marginTop="@dimen/button_margin_top"
+        app:layout_constraintStart_toEndOf="@id/backbutton"
+        app:layout_constraintEnd_toEndOf="@id/checkboxContainer" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

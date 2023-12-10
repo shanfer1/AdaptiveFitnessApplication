@@ -1,0 +1,9 @@
+<resources>
+    <!-- Larger margin size for larger screens -->
+    <dimen name="input_field_margin">50dp</dimen>
+
+    a    <dimen name="button_width">180dp</dimen>
+
+    <dimen name="first_input_field_margin">200dp</dimen>
+    <dimen name="between_input_field_margin">40dp</dimen>
+</resources>
